@@ -1,0 +1,204 @@
+/* Importaciones - fuentes */
+@import url('https://fonts.cdnfonts.com/css/ysabeau-sc');
+@import url('https://fonts.cdnfonts.com/css/quito');
+
+/* Establecer las variables en nuestro css
+    -paleta de colores
+    -tipografías
+    -medidas (opcional)
+*/
+
+
+/* root -> hace referencia a mi archivo raíz (<!DOCTYPE html>)*/
+:root {
+    /* paleta de colores */
+    --colorFondo: #D8C37F;
+    --colorEnfasis1: #A4AE20;
+    --colorEnfasis2: #C57023;
+    --colorEnfasis3: #7B361A;
+    --colorText: #d9d09e85;
+    --colorText2: #19160A;
+
+    /* Fuentes */
+    --textTitle: 'Ysabeau SC', sans-serif;
+    --textContent: 'Quito', sans-serif;
+}
+
+/* condiciones o estilos iniciales de mi página */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--colorFondo);
+    width: 100vw;
+    height: auto;
+    /* Overflow -> me sirve para definir qué pasa con el contenido que sobresale de mi contenedor */
+    overflow-x:hidden;
+
+}
+
+
+/* ----------------HEADER--------------- */
+header{
+    width: 100%;
+    height: 100px;
+}
+
+.menuNavegacion{
+/* importantísimo las dimensiones */
+    width: 100%;
+    height: 100px;
+    background-color: var(--colorEnfasis3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    /* poner esto por encima de todo */
+    z-index: 100;
+}
+
+.logo{
+    height: 100%;
+}
+.logo a{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-family: var(--textContent);
+    color: var(--colorText);
+    /* grosor de la fuente */
+    font-weight: bold;
+    /* cambiar tamaño a la letra */
+    font-size: 25px;
+}
+.p-logo{
+    width: 150px;
+    /* alineación del texto */
+    text-align: left;
+}
+.span-logo{
+    color: var(--colorEnfasis1);
+}
+.img-logo{
+    height: 100%;
+}
+
+.listaMenu{
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+.listaMenu a{
+    text-decoration: none;
+    color: var(--colorText);
+    font-family: var(--textContent);
+    font-size: 20px;
+}
+
+.listaMenu a:hover{
+    color: var(--colorEnfasis1);
+}
+
+/* ----------------MAIN--------------- */
+main{
+    width: 100%;
+    padding: 100px;
+}
+
+.contenedorPrincipal{
+    font-family: var(--textContent);
+}
+
+.contenedorPrincipal h1{
+    /* font-family: var(--textTitle); */
+    font-size: 40px;
+    color: var(--colorEnfasis3);
+}
+
+.contenedorImagenes{
+    border: 3px solid var(--colorEnfasis3);
+    margin-top: 50px;
+    border-radius: 50px;
+    /* define qué pasa con el contenido que sobre sale */
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 1fr 1f;
+    grid-template-columns:repeat(4, 1fr) ;
+}
+
+.contenedorImagenes img{
+    width: 100%;
+    height: 100%;
+}
+
+.imagenes{
+    display: grid;
+    position:relative;
+}
+
+.img1{
+    grid-row: 1/3;
+    grid-column: 4/5;
+}
+
+.img2{
+    grid-row: 1/2;
+    grid-column: 2/4;
+}
+
+.img3{
+    grid-row: 1/3;
+    grid-column: 1/2;
+}
+.img4{
+    grid-row: 2/3;
+    grid-column:3/4;
+}
+
+.parrafo-img{
+    background-color: #D8C37F;
+    position: absolute;
+    /* por defecto se organiza arriba 0, izquierda 0 */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    color: var(--colorEnfasis3);
+    /* opacidad de un elemento */
+    opacity: 0; 
+    /* 0% -> 100% */
+}
+
+.parrafo-img:hover{
+    opacity: 0.6;
+    /* cuando el cursor se ponga en la imágen, me salga como una manito */
+    cursor: pointer;
+}
+/* ----------------FOOTER--------------- */
+
+footer{
+    height: 100px;
+    background-color: var(--colorEnfasis3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: var(--textContent);
+    color: var(--colorText);
+}
