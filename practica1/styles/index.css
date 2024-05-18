@@ -1,0 +1,113 @@
+/* Reset styles default */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header img {
+    width: 100%;
+}
+
+/* Estilos menu */
+
+nav {
+    width: 99%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    border: 2px solid #00008b;
+    text-decoration: none;
+    color: #00008b;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.logo {
+    width: 60px;
+    border-radius: 50%;
+}
+
+/* main */
+/* Estilos del main */
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+section {
+    width: 100%;
+}
+
+.tituloGaleria {
+    color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: #FF0000 1px solid;
+    box-shadow: 5px 5px 5px rgba(255, 0, 0, 0.075);
+    border-radius: 30px;
+    font-size: xx-large;
+    font-weight: 600;
+    padding: 5px 0;
+    margin-bottom: 30px;
+}
+
+.galeria {
+    width: 99%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    background-color: #add8e6;
+    box-shadow: 5px 5px 5px rgba(173, 216, 230, 0.5);
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.galeria img {
+    width: 250px;
+    height: 250px;
+    border-radius: 20%;
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    margin: 15px auto;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    /* transition: transform 0.3s ease; */
+}
+
+.galeria div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.galeria p{
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-weight: 600;
+    font-size: large;
+}
+
+/* footer */
+
+footer{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #ffa500;
+}
